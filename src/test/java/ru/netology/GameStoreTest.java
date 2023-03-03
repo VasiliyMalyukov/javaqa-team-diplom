@@ -12,8 +12,8 @@ public class GameStoreTest {
     @BeforeEach
     public void setup() {
         store.addPlayTime("Viktor", 5);
-        store.addPlayTime("Olga", 7);
-        store.addPlayTime("Nikolay", 9);
+        store.addPlayTime("Olga", 20);
+        store.addPlayTime("Nikolay", 19);
         store.addPlayTime("Petr", 15);
     }
 
@@ -48,7 +48,7 @@ public class GameStoreTest {
     @Test
     public void shouldGetMostPlayerIfAllPlayersAreDifferent() {
 
-        assertEquals("Petr", store.getMostPlayer());
+        assertEquals("Olga", store.getMostPlayer());
     }
 
     @Test
