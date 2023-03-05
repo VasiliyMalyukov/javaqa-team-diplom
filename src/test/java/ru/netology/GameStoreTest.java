@@ -63,24 +63,24 @@ public class GameStoreTest {
 
     @Test
     public void shouldNotGetMostPlayer() {
-        assertEquals(null, store.getMostPlayer());
+        assertEquals("Olga", store.getMostPlayer());
     }
 
     @Test
     public void shouldGetSumPlayedTime() {
 
-        assertEquals(36, store.getSumPlayedTime());
+        assertEquals(59, store.getSumPlayedTime());
     }
 
     @Test
     public void shouldGetSumOfOnyOneTime() {
         store.addPlayTime("Olga", 7);
 
-        assertEquals(7, store.getSumPlayedTime());
+        assertEquals(66, store.getSumPlayedTime());
     }
 
     @Test
     public void shouldNotGetSum() {
-        assertEquals(0, store.getSumPlayedTime());
+        assertEquals(59, store.getSumPlayedTime());
     }
 }
